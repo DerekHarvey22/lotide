@@ -11,10 +11,5 @@ const assertArraysEqual = function(actual, expected) {
 }
 module.exports = assertArraysEqual;
 
-console.log(assertArraysEqual(["macbook", "laptops", "air"], ["hallelujah"]));
-console.log(assertArraysEqual(["mlbtheshow"], ["hallelujah"]));
 
-console.log(assertArraysEqual([1, 2, 3], [1, 2, 3]));
-
-;
 
