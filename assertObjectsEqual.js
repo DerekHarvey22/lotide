@@ -7,18 +7,18 @@ const assertEqual = function(actual, expected) {
 
 };
 const eqArrays = function (actual, expected) {
-  let conditionsMet = true;
+  let results = true;
   if (actual.length === expected.length) {
     for (let i = 0; i < actual.length; i++) {
       if (actual[i] !== expected[i]) {
-        conditionsMet = false;
+        results = false;
       };
       
     }
   } else {
-    conditionsMet = false;
+    results = false;
   } 
-  return conditionsMet;
+  return results;
 }
 const eqObjects = function(object1, object2) {
   if (Object.keys(object1).length !== Object.keys(object2).length) {
@@ -41,8 +41,13 @@ const eqObjects = function(object1, object2) {
 const assertObjectsEqual = function(object1, object2) {
   const inspect = require('util').inspect;
   if (eqObjects(object1, object2)) {
-    console.log(`${inspect(object1)} === ${inspect(object2)}\nThese objects are equal \n`);
+    console.log(`${inspect(object1)} === ${inspect(object2)} These objects are equal.`);
   } else {
-    console.log(`${inspect(object1)} !== ${inspect(object2)}\nThese objects are not equal\n`);
+    console.log(`${inspect(object1)} !== ${inspect(object2)} These objects are not equal.`);
   }
 };
+
+assertEqual("Lighthouse Labs", "Bootcamp");
+assertEqual(1, 1);
+
+assertObjectsEqual

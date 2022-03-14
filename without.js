@@ -40,4 +40,4 @@ const without = function(source, itemsToRemove) {
 
 
 console.log(without(["macbook", "laptops", "bootcamp"], ["website"]));
-
+console.log(assertArraysEqual())
