@@ -1,5 +1,5 @@
 // test/eqArrayTest.js// require assertEqual function as well
-const eqArrays = require('../eqArrays');
+const eqArrays = require('../eqArray');
 const assertEqual = require('../assertEqual');
 //test code//
 
