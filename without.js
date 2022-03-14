@@ -1,30 +1,20 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🆘🆘🆘 Assertion Failed: ${actual} !== ${expected}`);
-  }
-  
-
-};
-
 const eqArrays = function (actual, expected) {
-  let conditionsMet = true;
+  let results = true;
   if (actual.length === expected.length) {
     for (let i = 0; i < actual.length; i++) {
       if (actual[i] !== expected[i]) {
-        conditionsMet = false;
+        results = false;
       };
       
     }
   } else {
-    conditionsMet = false;
+    results = false;
   } 
-  return conditionsMet;
+  return results;
 }
 const assertArraysEqual = function(actual, expected) {
-  let conditionsMet;
-  if (conditionsMet === true) {
+  let results;
+  if (results === true) {
     console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
   } else {
     console.log(`🆘🆘🆘 Assertion Failed: ${actual} !== ${expected}`);
@@ -49,4 +39,5 @@ const without = function(source, itemsToRemove) {
 };
 
 
-assertArraysEqual(["hello", "world", "lighthouse"]);
+console.log(without(["macbook", "laptops", "bootcamp"], ["website"]));
+
