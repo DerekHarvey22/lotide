@@ -38,6 +38,9 @@ const without = function(source, itemsToRemove) {
   return sourceCopy;
 };
 
+module.exports = without;
+
+
 
 console.log(without(["macbook", "laptops", "bootcamp"], ["website"]));
 console.log(assertArraysEqual())
