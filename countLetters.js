@@ -22,3 +22,4 @@ const countLetters = function(string){
   return letterCount;
 };
 
+module.exports = letterCount;
