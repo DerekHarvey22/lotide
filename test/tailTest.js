@@ -1,6 +1,9 @@
 // test/tailTest.js/
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-//Test code:
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-console.log(tail(words)); 
+describe("#tail", () => {
+  it("returns ['Lighthouse', 'Labs'] for ['Yo Yo', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(['Yo Yo', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs']);
+  });
+});
